@@ -115,9 +115,10 @@ clearBtn.addEventListener('click', () => {
   showTask();
 });
 
-const loadDom = () => {
-  document.addEventListener('DOMContentLoaded', showTask);
-};
-loadDom();
+function handleDOMContentLoaded() {
+  showTask();
+}
+
+document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
 document.addEventListener('DOMContentLoaded', showTask);
 addBtn.addEventListener('click', addTask);
